@@ -7,4 +7,4 @@ app.get('/*', function(req, res) {
   res.sendFile('index.html', {root: 'dist/third-angular-project/'});
 });
 
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 4200);
