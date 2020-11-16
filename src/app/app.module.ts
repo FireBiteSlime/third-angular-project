@@ -1,16 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ApiService } from './api.service';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoDataService } from './todo-data.service';
+
+import { TodoListFooterComponent } from './todo-list-footer/todo-list-footer.component';
+import { TodoListHeaderComponent } from './todo-list-header/todo-list-header.component';
+import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
+//import { environment } from '../environments/environment';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoListComponent,
+    TodoListFooterComponent,
+    TodoListHeaderComponent,
+    TodoListItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TodoDataService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
